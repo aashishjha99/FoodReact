@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .nav-items > ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+
+  }
+  
+  .nav-items > ul li {
+    padding: 10px;
+  }
+  
+  .logo {
+    margin: 10px;
+    width: 250px;
+    padding: 10px;
+  }
+
+
+h1{
+    font-style: italic;
+}
+
+.restaurantList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.card {
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 30px;
+  }
+
+  .card-details {
+    height: 380px;
+    margin: 10px;
+  }
+  
+  .card-details > img {
+    width: 100%;
+  }
+  .card-details > h2 {
+    margin-left: 5px;
+  }
+  .card-details > h3 {
+    margin-left: 5px;
+  }
+  .card-details > h4 {
+    margin-left: 5px;
+  }
+

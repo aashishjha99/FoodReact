@@ -32,15 +32,16 @@ h1 {
 
 .card {
   width: 300px;
-  height: 400px;
+  height: 470px;
   border: 2px solid black;
   padding: 5px;
   margin: 30px;
 }
 
 .card-details {
-  height: 380px;
+  height: 350px;
   margin: 10px;
+  font-size: 0.9rem;
 }
 
 .card-details > img {

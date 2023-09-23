@@ -1,12 +1,12 @@
 import "../Comp/style.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IMAGE_URL, RESTAURANT_LIST } from "../Utility/Constants";
 
 const RestaurantCard = ({ name, cuisines, avgRating, cloudinaryImageId }) => {
   return (
     <div className="card">
       <div className="card-details">
-        <img src={IMAGE_URL + cloudinaryImageId}></img>
+        <img alt="items-view" src={IMAGE_URL + cloudinaryImageId}></img>
         <h2>{name}</h2>
         <h3>{cuisines.join("  , ")}</h3>
         <h4>{avgRating}</h4>
@@ -15,7 +15,7 @@ const RestaurantCard = ({ name, cuisines, avgRating, cloudinaryImageId }) => {
   );
 };
 
-// function fiterData(searchText, restaurant) {
+// function filterData(searchText, restaurant) {
 //   return restaurant.filter((rest) => rest.data.name.includes(searchText));
 // }
 
@@ -25,6 +25,15 @@ const filterdData = (searchText, restaurant) =>
 export default function Body() {
   const [restaurant, setRestaurant] = useState(RESTAURANT_LIST);
   const [searchText, setSearchText] = useState("");
+
+  // once after render if dependency array is empty
+  // [searchText] depedency array  : once after render and after every rerenders when text changes
+  useEffect(() => {
+    console.log("use elllfevap[pka;pofdk;'oakd");
+  }, [searchText]);
+
+  console.log("render");
+
   return (
     <>
       <div className="search-container">
@@ -42,7 +51,7 @@ export default function Body() {
           onClick={() => {
             const filteredRestaurant =
               searchText.length === 0 && searchText != null
-                ?  RESTAURANT_LIST
+                ? RESTAURANT_LIST
                 : filterdData(searchText, restaurant);
             setRestaurant(filteredRestaurant);
           }}
